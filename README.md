@@ -10,7 +10,10 @@ NOTAS
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:
   Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
   ------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+  Problema 2)
+  siempre olvido como abrir el IIS desde el ejecutar:
+  inetmgr.exe
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
   
 Saludos.
 Aldair Echeverria Sanabria
