@@ -5,7 +5,7 @@ NOTAS</br>
 1) aqui esta codigo que considero que es bueno tenerlo a la mano en todo momento</br>
 2) es codigo en: SQL, C#, Py, R, .Net ASP</br>
 3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.</h6></br>
-  ------------------------------------------------------------------------------------------------------------------------------------------------------</br>
+  <hr>
   <h6>
   Problema 1)</br>
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:</br>
