@@ -1,19 +1,24 @@
-<h1>NOTAS</h1>
-<hr>
-<h6 style="color: #200975bd; font: 90% sans-serif;">
+<h1>NOTAS</h1></br>
+<h2>Problemas</h2>
+<h6>
+  
 1) aqui esta codigo que considero que es bueno tenerlo a la mano en todo momento</br>
 2) es codigo en: SQL, C#, Py, R, .Net ASP</br>
 3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.</h6></br>
-  <hr>
-  <h6>
-  Problema 1)</br>
+<hr>
+ <spam> 
+  <strong>Problema 1)</strong></br>
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:</br>
-  Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} </h6> </br>
+  Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}</br>
   <hr>
-  <h6>Problema 2)</br>
+  <strong>Problema 2)</strong></br>
   siempre olvido como abrir el IIS desde el ejecutar:</br>
-  inetmgr.exe</h6></br>
-  <hr>
+  inetmgr.exe</br>
+ </spam> 
+ </h6>
+ <hr>
+ 
+  <h2>Tips</h2>
   <h6>Tips 1)</br>
   en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
 SE: SELECT</br>
