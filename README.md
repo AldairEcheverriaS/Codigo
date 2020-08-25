@@ -1,11 +1,10 @@
 <h1>NOTAS</h1></br>
-<h2>Problemas</h2>
-<h6>
-  
 1) aqui esta codigo que considero que es bueno tenerlo a la mano en todo momento</br>
 2) es codigo en: SQL, C#, Py, R, .Net ASP</br>
 3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.</h6></br>
 <hr>
+<h2>Problemas</h2>
+<h6>
  <spam> 
   <strong>Problema 1)</strong></br>
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:</br>
