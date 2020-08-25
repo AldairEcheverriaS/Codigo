@@ -1,19 +1,19 @@
 ----------------------------------------------------------</br>
 NOTAS</br>
 ----------------------------------------------------------</br>
-
+<h6>
 1) aqui esta codigo que considero que es bueno tenerlo a la mano en todo momento</br>
 2) es codigo en: SQL, C#, Py, R, .Net ASP</br>
-3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.</br>
+3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.</h6></br>
   ------------------------------------------------------------------------------------------------------------------------------------------------------</br>
   <h6>
   Problema 1)</br>
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:</br>
-  Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} <h6> </br>
+  Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} </h6> </br>
   ------------------------------------------------------------------------------------------------------------------------------------------------------</br>
   <h6>Problema 2)</br>
   siempre olvido como abrir el IIS desde el ejecutar:</br>
-  inetmgr.exe<h6></br>
+  inetmgr.exe</h6></br>
   ------------------------------------------------------------------------------------------------------------------------------------------------------</br>
   <h6>Tips 1)</br>
   en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
