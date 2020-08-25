@@ -17,7 +17,7 @@
  </h6>
  <hr>
  
-  <h2>Tips</h2>
+  <h2>Consejos</h2>
   <h6>
  Tips 1)</br>
 en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
