@@ -7,7 +7,7 @@ NOTAS
 3) tambien aqui en este archivo, dejare algunos tips a problemas que me suceden dia tras dia.
   ------------------------------------------------------------------------------------------------------------------------------------------------------
   Problema 1)
-  No funcionaba el boton windows, asi que abre powershell como admi y ejecuta lo siguiente
+  No funcionaba el boton windows, asi que abre powershell como Admi y ejecute el siguiente codigo:
   Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
   ------------------------------------------------------------------------------------------------------------------------------------------------------
   
