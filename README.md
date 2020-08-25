@@ -19,23 +19,24 @@
  
   <h2>Consejos</h2>
   <h6>
- Tips 1)</br>
-en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
-SE: SELECT</br>
-FR: FROM</br>
-WH: WHERE</br>
-HA: HAVING</br>
-SF: SELECT FROM</br>
-SFW: SELECT FROM WHERE</br>
-NJ: NATURAL JOIN</br>
-IJ: INNER JOIN ON</br>
-IJU: INNER JOIN USING</br>
-LJ: LEFT JOIN ON</br>
-LJU: LEFT JOIN USING</br>
-RJ: RIGHT JOIN ON</br>
-RJU: RIGHT JOIN USING</br>
-FOJ: FULL OUTER JOIN ON</br>
-FOJU: FULL OUTER JOIN USING</br>
+ Consejo 1)</br>
+Para **Consultas-SQL** En VSCode utilice la extencion **Upper Case SQL** para crear rapidamente consultas parametricas:</br>
+</br>
+**SE:** SELECT</br>
+**FR:** FROM</br>
+**WH:** WHERE</br>
+**HA:** HAVING</br>
+**SF:** SELECT FROM</br>
+**SFW:** SELECT FROM WHERE</br>
+**NJ:** NATURAL JOIN</br>
+**IJ:** INNER JOIN ON</br>
+**IJU:** INNER JOIN USING</br>
+**LJ:** LEFT JOIN ON</br>
+**LJU:** LEFT JOIN USING</br>
+**RJ:** RIGHT JOIN ON</br>
+**RJU:** RIGHT JOIN USING</br>
+**FOJ:** FULL OUTER JOIN ON</br>
+**FOJU:** FULL OUTER JOIN USING</br>
     </h6>
   
 Saludos.</br>
