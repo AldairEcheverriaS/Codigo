@@ -14,6 +14,8 @@ NOTAS
   siempre olvido como abrir el IIS desde el ejecutar:
   inetmgr.exe
   ------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+  Tips 1)
+  <h6>en VS Code utilizar la extencion Upper Case SQL para acceso rapido</h6>
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
 Saludos.
 Aldair Echeverria Sanabria
