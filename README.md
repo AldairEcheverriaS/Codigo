@@ -9,7 +9,7 @@
   <strong>Problema 1)</strong></br>
   No funcionaba el boton windows, asi que abri powershell como Admi y ejecute el siguiente codigo:</br>
   Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}</br>
-  <hr>
+  </br>
   <strong>Problema 2)</strong></br>
   siempre olvido como abrir el IIS desde el ejecutar:</br>
   inetmgr.exe</br>
@@ -18,8 +18,9 @@
  <hr>
  
   <h2>Tips</h2>
-  <h6>Tips 1)</br>
-  en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
+  <h6>
+ Tips 1)</br>
+en VS Code utilizar la extencion Upper Case SQL para acceso rapido detalle:</br>
 SE: SELECT</br>
 FR: FROM</br>
 WH: WHERE</br>
@@ -36,6 +37,6 @@ RJU: RIGHT JOIN USING</br>
 FOJ: FULL OUTER JOIN ON</br>
 FOJU: FULL OUTER JOIN USING</br>
     </h6>
-  <hr>
+  
 Saludos.</br>
 Aldair Echeverria Sanabria
