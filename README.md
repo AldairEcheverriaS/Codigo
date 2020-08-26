@@ -36,7 +36,7 @@ LJU: LEFT JOIN USING</br>
 RJ: RIGHT JOIN ON</br>
 RJU: RIGHT JOIN USING</br>
 FOJ: FULL OUTER JOIN ON</br>
-FOJU: FULL OUTER JOIN USING</br>
+FOJU: FULL OUTER JOIN USING</br></br>
  Consejo 2)</br>
 Para abrir facilmente un documento SWI Prolog en MAC utilizar el siguiente formato de la URL donde se encuentra el archivo, todos los predicados lo edito en VS CODE
 </br>
