@@ -1,4 +1,4 @@
-/* Predicados monádicos: PROPIEDADES */
+/* Predicados monádicos: PROPIEDADES */
 /* mujer(Per) <- Per es una mujer */ 
 mujer(clara).
 mujer(chelo).
