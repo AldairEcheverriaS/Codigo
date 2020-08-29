@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- TODO ESTOS SON DEFINICIONES HTML Y PARA QUE FUNCIONE EL ESTILO DE BOOTSTRAP -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Chatboot</title>
+
+    <!-- AQUI REALIZAMOS LA LOGICA DEL CHATBOOT EN CODIGO JAVASCRIPT (recomiento primero ver la parte del Body y ver donde se esta llmando a la funcion) -->
+    <script type="text/javascript">
+    var cadena, sw, id;
+    var tener= RegExp("(TIENES|TENGO|TENES|TENÉS)");            //aqui agregamos expresiones regulares del verbo Tener
+    var porfa= RegExp("(PORFA|POR FAVOR|PORFAVOR|PF|PLEASE)");  //aqui agregamos expresiones regulares de por favor
+    var insultos= RegExp("(CARAJO|HP|MIERDA|IMBECIL|PUTA)");    //aqui agregamos expreciones regulares de insultos
+    var edad= /AÑOS/;                                           //aqui agregamos una expresion concreta 
+    
+    function evaluarEdad() {
+        sw=0;
+        id="Respuesta2";
+        cadena= document.getElementById("txtPregunta").value;
+        document.getElementById(id).innerHTML="<samp style='color: blue;''>tú: </samp> "+cadena;
+        cadena= cadena.toUpperCase();
+        if (tener.test(cadena) && edad.test(cadena))
+        {
+            sw=1;
+        }
+        if (porfa.test(cadena))
+        {
+            sw=2;
+        }
+        if (insultos.test(cadena))
+        {
+            sw=3;
+        }
+        id="Respuesta3";
+        respuesa(id);
+    }
+    function respuesa(id){
+        switch (sw) {
+            case 0:
+            document.getElementById(id).innerHTML="<samp style='color: blue;''>Boot: </samp> No entendi tu pregunta, intenta ser mas claro por favor";
+                break;
+            case 1:
+            document.getElementById(id).innerHTML="<samp style='color: blue;''>Boot: </samp> Yo tengo 1 año de vida...";
+                break;
+            case 2:
+            document.getElementById(id).innerHTML="<samp style='color: blue;''>Boot: </samp> Yo tengo 1 año de vida... y eres una persona amable, no muchos dicen por favor";
+                break;
+            case 3 :
+            document.getElementById(id).innerHTML="<samp style='color: blue;''>Boot: </samp> Yo tengo 1 año de vida. Seria bueno que dejes los insultos y cuentes hasta 10, todos tenemos dias dificiles.";
+                break;
+            default:
+                break;
+        }
+    }
+    
+    </script>
+  </head>
+  <!-- Aqui comienza la parte visual donde llamamos al boot y armamos el chat -->
+  <body>  
+    <div class="container">
+        <h1>Chat</h1>
+    <div class="form-group">
+      <p id="Respuesta1">
+         <samp style="color: blue;">Boot: </samp>  hola en que puedo ayudarte?
+      </p>
+      <p id="Respuesta2">
+      </p>
+      <p id="Respuesta3">
+      </p>
+    </div>
+        <div class="form-group">
+      <label for="">Mensaje</label>
+      <input type="text" class="form-control" name="" id="txtPregunta" aria-describedby="helpId" placeholder="">
+      <small id="helpId" class="form-text text-muted">chatboot</small>
+      <input name="" id="" class="btn btn-primary" type="button" value="Enviar" onclick="evaluarEdad()">
+    </div>
+    </div>
+    <!-- aqui solo agregamos links para utilizar el jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
