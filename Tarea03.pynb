@@ -1,0 +1,95 @@
+{
+ "metadata": {
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3-final"
+  },
+  "orig_nbformat": 2,
+  "kernelspec": {
+   "name": "Python 3.7.3 64-bit ('ProgramData': virtualenv)",
+   "display_name": "Python 3.7.3 64-bit ('ProgramData': virtualenv)",
+   "metadata": {
+    "interpreter": {
+     "hash": "b3ba2566441a7c06988d0923437866b63cedc61552a5af99d1f4fb67d367b25f"
+    }
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2,
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#AQUI IMPORTO LAS LIBRERIAS QUE NECESITO\n",
+    "import pandas.io.sql\n",
+    "import pyodbc\n",
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": "        CIC         IDC TIPO IDC                   NROCUENTA  TIOAUX  MONEDA  \\\n0  00675083  04507440CB        Q  10303301000000000008144611  CPEHFS      68   \n1  00676532  05978556LP        Q  10303201000000000008215801  CPEEFM      68   \n2  00920224  05991708LP        Q  10303201000000000008286748  CPEEFM      68   \n3  00671339  04775568LP        Q  10303701000000000008205657  CPEEFM      68   \n4  00671848  05652311CH        Q  10303101000000000008193071  CPEHIM      68   \n\n  TIPO CREDITO      SALDO  SDO NUEVO  SDO DIFERIMIENTO  SDO REGULARIZADORA  \\\n0           H3  190955.11  180767.55          10187.56                 0.0   \n1           N0    9058.39    6845.29           2213.10                 0.0   \n2           N0   30141.34   25784.16           4357.18                 0.0   \n3           N0    6740.45    5193.81           1546.64                 0.0   \n4           H0  610348.33  592750.33          17598.00                 0.0   \n\n   INT DIFERIMIENTO  INT_NORMAL    C. COMP  POR PREV  PREVISION  PREV NUEVO  \\\n0           3274.75        0.00   95477.55      0.25     238.69      225.96   \n1            374.13       51.08    9058.39      3.00     271.75      205.36   \n2           1038.20     1942.44   30141.34      3.00     904.24      773.52   \n3            239.36       78.86    6740.45      3.00     202.21      155.81   \n4          23651.00        0.00  305174.17      0.25     762.94      740.94   \n\n   PREV DIFERIMIENTO  SDO REGULARIZADORA.1 CALIFICACION  \n0              12.73                     0            A  \n1              66.39                     0            A  \n2             130.72                     0            A  \n3              46.40                     0            A  \n4              22.00                     0            A  ",
+      "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>CIC</th>\n      <th>IDC</th>\n      <th>TIPO IDC</th>\n      <th>NROCUENTA</th>\n      <th>TIOAUX</th>\n      <th>MONEDA</th>\n      <th>TIPO CREDITO</th>\n      <th>SALDO</th>\n      <th>SDO NUEVO</th>\n      <th>SDO DIFERIMIENTO</th>\n      <th>SDO REGULARIZADORA</th>\n      <th>INT DIFERIMIENTO</th>\n      <th>INT_NORMAL</th>\n      <th>C. COMP</th>\n      <th>POR PREV</th>\n      <th>PREVISION</th>\n      <th>PREV NUEVO</th>\n      <th>PREV DIFERIMIENTO</th>\n      <th>SDO REGULARIZADORA.1</th>\n      <th>CALIFICACION</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>00675083</td>\n      <td>04507440CB</td>\n      <td>Q</td>\n      <td>10303301000000000008144611</td>\n      <td>CPEHFS</td>\n      <td>68</td>\n      <td>H3</td>\n      <td>190955.11</td>\n      <td>180767.55</td>\n      <td>10187.56</td>\n      <td>0.0</td>\n      <td>3274.75</td>\n      <td>0.00</td>\n      <td>95477.55</td>\n      <td>0.25</td>\n      <td>238.69</td>\n      <td>225.96</td>\n      <td>12.73</td>\n      <td>0</td>\n      <td>A</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>00676532</td>\n      <td>05978556LP</td>\n      <td>Q</td>\n      <td>10303201000000000008215801</td>\n      <td>CPEEFM</td>\n      <td>68</td>\n      <td>N0</td>\n      <td>9058.39</td>\n      <td>6845.29</td>\n      <td>2213.10</td>\n      <td>0.0</td>\n      <td>374.13</td>\n      <td>51.08</td>\n      <td>9058.39</td>\n      <td>3.00</td>\n      <td>271.75</td>\n      <td>205.36</td>\n      <td>66.39</td>\n      <td>0</td>\n      <td>A</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>00920224</td>\n      <td>05991708LP</td>\n      <td>Q</td>\n      <td>10303201000000000008286748</td>\n      <td>CPEEFM</td>\n      <td>68</td>\n      <td>N0</td>\n      <td>30141.34</td>\n      <td>25784.16</td>\n      <td>4357.18</td>\n      <td>0.0</td>\n      <td>1038.20</td>\n      <td>1942.44</td>\n      <td>30141.34</td>\n      <td>3.00</td>\n      <td>904.24</td>\n      <td>773.52</td>\n      <td>130.72</td>\n      <td>0</td>\n      <td>A</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>00671339</td>\n      <td>04775568LP</td>\n      <td>Q</td>\n      <td>10303701000000000008205657</td>\n      <td>CPEEFM</td>\n      <td>68</td>\n      <td>N0</td>\n      <td>6740.45</td>\n      <td>5193.81</td>\n      <td>1546.64</td>\n      <td>0.0</td>\n      <td>239.36</td>\n      <td>78.86</td>\n      <td>6740.45</td>\n      <td>3.00</td>\n      <td>202.21</td>\n      <td>155.81</td>\n      <td>46.40</td>\n      <td>0</td>\n      <td>A</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>00671848</td>\n      <td>05652311CH</td>\n      <td>Q</td>\n      <td>10303101000000000008193071</td>\n      <td>CPEHIM</td>\n      <td>68</td>\n      <td>H0</td>\n      <td>610348.33</td>\n      <td>592750.33</td>\n      <td>17598.00</td>\n      <td>0.0</td>\n      <td>23651.00</td>\n      <td>0.00</td>\n      <td>305174.17</td>\n      <td>0.25</td>\n      <td>762.94</td>\n      <td>740.94</td>\n      <td>22.00</td>\n      <td>0</td>\n      <td>A</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+     },
+     "metadata": {},
+     "execution_count": 16
+    }
+   ],
+   "source": [
+    "#ABRIMOS EL ARCHIVO EXCEL: OPERACIONES QUE REALIZARON DIFERIMIENTOS EN EL MES DE OCTUBRE\n",
+    "nomArchivo=\"\\\\\\\\BTBDCO01\\\\ReportesCentral\\\\RPT_DIFERIMIENTOS_MEN\\\\RPT_DIFERIMIENTO_MENSUAL_2020_09_08_182405.xlsx\" #ruta del archivo\n",
+    "archivo_excel = pd.read_excel(nomArchivo, sheet_name='Hoja1',skiprows=3)\n",
+    "archivo_excel.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": "\n    Moda: 14000\n\n"
+    }
+   ],
+   "source": [
+    "\n",
+    "#MODA DE LOS SALDOS EN LAS OPERACIONES DIFERIDAS\n",
+    "moda = archivo_excel[\"SALDO\"].mode()\n",
+    "print(\"\"\"\n",
+    "    Moda: %d\n",
+    "\"\"\" % (moda))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ]
+}
